@@ -1,0 +1,14 @@
+
+file1 = open("MyFile.txt","w+")
+arrays = ["Ford"] 
+file2 = open("read.txt","r")
+fread=file2.readlines()
+arrays.clear()
+for x in fread:
+    arrays.append(x.strip())
+    print(x)
+for line in arrays:
+    print (line)
+    file1.write("public string %s;\n" % line)
+
+file1.close()
